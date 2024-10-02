@@ -1,0 +1,22 @@
+ /*Pablo Pérez Álvarez UO294197*/
+ /*Especifidad 001*/
+ body {
+	 font-family:'Arial',sans-serif;
+	 font-size: 16px; 
+	 line-height: 1.5;
+     background-color: #d6ad60; 
+	 color: #122620; 
+ }
+ 
+ /*Especifidad 001*/ 
+ header{
+	 background-color:#b68d40;
+	 /*color se hereda de body*/
+ }
+  /*Especifidad 001*/
+ h1,nav{
+    color: #f4ebd0;
+	/*background color se hereda de header*/
+}
+
+
