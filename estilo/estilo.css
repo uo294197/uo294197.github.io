@@ -29,7 +29,8 @@
 
 @media (max-width: 600px) {
   img {
-    width: 50%;
+	height: auto;
+    width: 30%;
   }
 }
 
