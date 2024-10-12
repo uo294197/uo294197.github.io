@@ -27,16 +27,18 @@
     font-weight: bold;
 }
 
+
+ 
 @media (max-width: 600px) {
   img {
 	height: auto;
-    width: 30%;
+    width: 50%;
   }
 }
 
 @media only screen and (max-width: 600px) {
   video {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
   }
 }
