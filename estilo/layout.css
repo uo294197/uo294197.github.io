@@ -1,0 +1,39 @@
+ /*Pablo Pérez Álvarez UO294197*/
+  /*Especifidad 001*/ 
+ header{
+	display: flex; 
+	flex-direction: row;
+    justify-content: space-between; 
+    align-items: baseline ;
+    padding: 10px 20px;
+	background-color:#b68d40;
+	color: #f4ebd0;
+	font-weight: bold;
+	/*color se hereda de h1,nav*/
+ }
+ 
+ 
+ nav a {
+    text-decoration: none; 
+    padding: 15px; 
+	font-size: 15px;
+
+}
+
+nav a:link{
+	color: white;
+}
+
+nav a:visited{
+	color: white;
+}
+
+nav .active {
+    background-color: #d6ad60; 
+    border-radius: 5px; 
+}
+
+nav a:hover {
+    background-color: #d6ad60; 
+	 border-radius: 5px; 
+}
