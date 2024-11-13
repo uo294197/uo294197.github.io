@@ -1,0 +1,61 @@
+ /*Especifidad 002*/
+main > section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 1em; 
+    padding: 0.7em;
+}
+
+ /*Especifidad 003*/
+main > section > article {
+    background-color: #b68d40;
+	color: #f4ebd0;
+    width: calc(23% - 1.3em); 
+    box-sizing: border-box; 
+    text-align: center; 
+    padding: 1em;
+    border-radius: 0.5em; 
+    box-shadow: 0em 0.25em 0.5em rgba(0, 0, 0, 0.2); 
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/*Especifidad 002*/
+section > a {
+    padding: 0.5em;
+    border: 1px solid #b68d40;
+    border-radius: 0.3em;
+}
+
+ /*Especifidad 021*/
+article[data-state="flip"],
+article[data-state="revealed"] {
+    transform: rotateY(180deg);
+}
+
+ /*Especifidad 004*/
+main > section > article > img {
+    width: 7em; 
+    height: 7em;
+    margin: 0.7em auto; 
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+ /*Especifidad 002*/
+article h3 {
+    backface-visibility: hidden;
+    margin-top: 0.9em;
+    font-size: 1.2em;
+}
+ /*Especifidad 011*/
+article[data-state="hidden"] h3 {
+    display: block;
+}
+

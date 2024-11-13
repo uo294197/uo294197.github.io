@@ -1,39 +1,54 @@
  /*Pablo Pérez Álvarez UO294197*/
+ 
   /*Especifidad 001*/ 
  header{
 	display: flex; 
 	flex-direction: row;
     justify-content: space-between; 
-    align-items: baseline ;
-    padding: 10px 20px;
+    align-items: baseline;
+    padding: 0.7em 1.3em;
 	background-color:#b68d40;
 	color: #f4ebd0;
 	font-weight: bold;
 	/*color se hereda de h1,nav*/
  }
  
- 
+  /*Especifidad 002*/
  nav a {
     text-decoration: none; 
-    padding: 15px; 
-	font-size: 15px;
+    padding: 1.1em; 
+	font-size: 1.1em;
 
 }
-
+ /*Especifidad 012*/
+ /* hereda color de fondo de header */
 nav a:link{
 	color: white;
 }
-
+ /*Especifidad 012*/
+  /* hereda color de fondo de header */
 nav a:visited{
 	color: white;
 }
-
+ /*Especifidad 011*/
+  /* hereda color de primer plano de header */
 nav .active {
     background-color: #d6ad60; 
-    border-radius: 5px; 
+    border-radius: 0.3em; 
 }
-
+ /*Especifidad 012*/
+  /* hereda color de primer plano de header */
 nav a:hover {
     background-color: #d6ad60; 
-	 border-radius: 5px; 
+	 border-radius: 0.3em; 
 }
+
+ /*Especifidad 001*/
+@media (max-width: 600px) {
+  header {
+	height: 80%;
+    width: auto;
+  }
+}
+
+
