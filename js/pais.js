@@ -9,7 +9,7 @@ class Pais{
         this.tipo = "&mode=xml";
         this.unidades = "&units=metric";
         this.idioma = "&lang=es";
-        this.url = "https://api.openweathermap.org/data/2.5/weather?q=" + this.ciudad + this.tipo + this.unidades + this.idioma + "&APPID=" + this.apikey;
+        this.url = "http://api.openweathermap.org/data/2.5/weather?q=" + this.ciudad + this.tipo + this.unidades + this.idioma + "&APPID=" + this.apikey;
     }
     
     getNombreCircuito(){
