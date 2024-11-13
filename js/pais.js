@@ -18,28 +18,30 @@ class Pais{
         return this.nombreCircuito
     }
    
- cargarDatos() {
+cargarDatos() {
     $.ajax({
         dataType: "xml",
         url: this.url,
         method: 'GET',
         success: function(datos) {
-            let forecast = "";
+            console.log("Datos recibidos:", datos);  // Verificar que llegan datos
+            
+            let forecast = ""; // Acumula el HTML de los pronósticos
             
             // Itera sobre cada <time> en <forecast>
             $(datos).find("forecast > time").each(function() {
-                // Obtén la información de fecha y tiempo
-                let fecha = $(this).attr("from").split("T")[0]; // Extrae la fecha
+                // Obtén la información de fecha
+                let fecha = $(this).attr("from").split("T")[0];
                 
                 // Extrae los datos del clima
-                let tempMax = parseFloat($(this).find("temperature").attr("max")) - 273.15; // Kelvin a Celsius
+                let tempMax = parseFloat($(this).find("temperature").attr("max")) - 273.15;
                 let tempMin = parseFloat($(this).find("temperature").attr("min")) - 273.15;
                 let humedad = $(this).find("humidity").attr("value");
-                let icono = $(this).find("symbol").attr("var"); // Código del icono del clima
+                let icono = $(this).find("symbol").attr("var");
                 let descripcion = $(this).find("symbol").attr("name");
-                let lluvia = $(this).find("precipitation").attr("probability") || "0"; // Probabilidad de precipitación
-
-                // Genera el contenido de cada día en formato HTML
+                let lluvia = $(this).find("precipitation").attr("probability") || "0";
+                
+                // Genera el HTML de cada día
                 forecast += `<article>
                     <h3>Pronóstico para ${fecha}</h3>
                     <p>Temperatura mínima: ${tempMin.toFixed(1)} °C</p>
@@ -50,14 +52,19 @@ class Pais{
                 </article>`;
             });
             
+            // Verifica el HTML generado en la consola antes de insertarlo
+            console.log("HTML generado:", forecast);
+
             // Inserta el pronóstico en el body
             $("body").append(`<section>${forecast}</section>`);
         },
         error: function() {
+            // En caso de error en la petición, muestra un mensaje en el body
             $("body").append("<section><p>¡Error al cargar los datos del tiempo!</p></section>");
         }
     });
 }
+
     crearElemento(tipoElemento, texto, insertarAntesDe){
         // Crea un nuevo elemento modificando el Ã¡rbol DOM
         // El elemnto creado es de 'tipoElemento' con un 'texto' 
