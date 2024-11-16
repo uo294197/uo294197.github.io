@@ -1,18 +1,11 @@
 class Pais {
       constructor(){
-        $("select").prop("selectedIndex",0);
         this.apikey = "9b78bae472a2bd2d0d112053ad77a805";
-        this.ciudad = $("select option:selected").val();
-        this.codigoPais = "ES";
+        this.ciudad = "Shanghai";
+        this.codigoPais = "CN";
         this.unidades = "&units=metric";
         this.idioma = "&lang=es";
         this.url = "https://api.openweathermap.org/data/2.5/weather?q=" + this.ciudad + "," + this.codigoPais + this.unidades + this.idioma + "&APPID=" + this.apikey;        
-    }
-
-    actualizarCiudad() {
-        this.ciudad = $("select option:selected").val();
-        this.url = "https://api.openweathermap.org/data/2.5/weather?q=" + this.ciudad + "," + this.codigoPais + this.unidades + this.idioma + "&APPID=" + this.apikey;
-        $("input[type=\"button\"]").attr("disabled", false);
     }
 
     mostrarTiempo(){
