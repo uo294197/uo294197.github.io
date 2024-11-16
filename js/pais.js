@@ -113,7 +113,6 @@ class Pais {
         this.crearElemento("h4", "Datos", "footer"); // Crea un elemento con DOM 
         this.crearElemento("p", "", "footer"); // Crea un elemento con DOM para los datos obtenidos con XML
         this.cargarDatos("12"); // Ejemplo: Cargar pronóstico para las 12:00
-        $("button").attr("disabled", "disabled");
     }
 
     crearElemento(tipoElemento, texto, insertarAntesDe) {
