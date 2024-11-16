@@ -10,9 +10,12 @@
 	<meta name ="keywords" content ="f1" />
 	<meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="estilo/estilo.css" />
+	<link rel="stylesheet" href="estilo/layout.css" />
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
+<header>
     <!-- Datos con el contenidos que aparece en el navegador -->
     <h1>F1 Desktop</h1>
 	<nav>
@@ -24,7 +27,11 @@
 	<a href="viajes.html">Viajes</a>
 	<a href="juegos.html">Juegos</a>
 	</nav>
-	<h2>Juegos</h2>
-    <p>En desarrollo</p>
+</header>
+<script src="js/fondo.js"></script>
+<script> document.addEventListener("DOMContentLoaded", () => {
+    const fondo = new Fondo("china", "pekin", "shanghai");
+});
+</script>
 </body>
 </html>

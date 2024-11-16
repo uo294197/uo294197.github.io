@@ -11,7 +11,10 @@
 	<meta name ="keywords" content ="f1" />
 	<meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="estilo/estilo.css" />
-		<link rel="stylesheet" href="estilo/layout.css" />
+	<link rel="stylesheet" href="estilo/layout.css" />
+	<link rel="stylesheet" href="estilo/mapa.css" />
+	<script src="js/viajes.js"></script> 
+	
 </head>
 
 <body>
@@ -31,7 +34,20 @@
 	<p> Estás en: <a href="index.html">Inicio</a> >> Viajes </p>
 	<main>
 	<h2>Viajes</h2>
-	<p>En desarrollo</p>
+	<div id="mapaEstatico"></div>
+	<div id="mapaDinamico"></div>
+	<p><input type="file" id="archivoXML" accept=".xml" onchange="Viaje.leerArchivoTexto(this.files[0]);"></p>
+	 <p id="nombreArchivo"></p>
+	 <p id="tamañoArchivo"></p>
+	 <p id="tipoArchivo"></p>
+	 <p id="ultimaModificacion"></p>
+	 <p id="contenidoArchivo"></p>  
+	 <pre id="areaTexto"></pre>
+	 <p id="errorLectura"></p>
+	 <p><input type="file" id="archivoKML" accept=".kml" onchange="Viaje.leerArchivoKML(this.files[0]);"></p>
   	</main>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTrIKXCE08WLNimTdu5W0taOgFe08W6N4&callback=miMapa.initMap"></script> 
+	
+	
 </body>
 </html>

@@ -12,8 +12,7 @@
 	<meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="estilo/estilo.css" />
 	<link rel="stylesheet" href="estilo/layout.css" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="js/pais.js"></script>
+	<link rel="stylesheet" href="estilo/memoria.css" />
 </head>
 
 <body>
@@ -24,15 +23,28 @@
 	<a href="piloto.html">Piloto</a>
 	<a href="noticias.html">Noticias</a>
 	<a href="calendario.html">Calendario</a>
-	<a href="meteorologia.html" class="active">Meteorología</a>
+	<a href="meteorologia.html">Meteorología</a>
 	<a href="circuito.html">Circuito</a>
 	<a href="viajes.html">Viajes</a>
-	<a href="juegos.html">Juegos</a>
+	<a href="juegos.html" class="active">Juegos</a>
 	</nav>
 	</header>
-	<p> Estás en: <a href="index.html">Inicio</a> >> Meteorologia </p>
-		<main>
-	<h2>Meterelologia</h2>
+	<p> Estás en: <a href="index.html">Inicio</a> >> <a href="juegos.html">Juegos</a> >> Memoria</p>
+	<section>
+            <h2>Juegos</h2>
+            <a href="memoria.html">Memoria</a>
+            <a href="semaforo.html">Semáforo</a>
+       </section>
+	<main>
+	<h2>Juego de memoria</h2>
+	
+   <script src="js/memoria.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const juego = new Memoria();  
+    });
+	</script>
+
 		</main>
 </body>
 </html>
