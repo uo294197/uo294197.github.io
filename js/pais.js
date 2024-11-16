@@ -7,12 +7,13 @@ class Pais{
     }
 	
     setValores(){
-		this.apikey = "9b78bae472a2bd2d0d112053ad77a805";
-		this.ciudad = this.nombreCircuito;
-        this.tipo = "&mode=xml";
+	this.apikey = "9b78bae472a2bd2d0d112053ad77a805";
+        this.ciudad = "Shanghai";
+        this.codigoPais = "CN";
         this.unidades = "&units=metric";
         this.idioma = "&lang=es";
-        this.url = "http://api.openweathermap.org/data/2.5/forecast?lat=" + this.latMeta+"&lon="+this.longMeta + "mode="+this.tipo + this.unidades + this.idioma + "&appid=" + this.apikey;
+        this.url = "https://api.openweathermap.org/data/2.5/weather?q=" + this.ciudad + "," + this.codigoPais + this.unidades + this.idioma + "&APPID=" + this.apikey; 
+        this.verXML()
     }
     
     getNombreCircuito(){
@@ -107,9 +108,6 @@ class Pais{
         });
     }
     crearElemento(tipoElemento, texto, insertarAntesDe){
-        // Crea un nuevo elemento modificando el Ã¡rbol DOM
-        // El elemnto creado es de 'tipoElemento' con un 'texto' 
-        // El elemnto se coloca antes del elemnto 'insertarAntesDe'
         var elemento = document.createElement(tipoElemento); 
         elemento.innerHTML = texto;
         $(insertarAntesDe).before(elemento);
@@ -122,7 +120,6 @@ class Pais{
         this.crearElemento("h4","Datos","footer"); // Crea un elemento con DOM 
         this.crearElemento("p","","footer"); // Crea un elemento con DOM para los datos obtenidos con XML
         this.cargarDatos();
-        $("button").attr("disabled","disabled");
     }
 }
 
