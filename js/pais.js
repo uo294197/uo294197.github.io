@@ -30,7 +30,7 @@ class Pais {
                 
                     //ExtracciÃ³n de los datos contenidos en el XML
                     var totalNodos            = $('*',datos).length; // cuenta los elementos de XML: son los nodos del Ã¡rbol DOM de XML
-                    var ciudad                = $('city',datos).attr("name");
+                    var ciudad                = $('location',datos).attr("name");
                     var longitud              = $('coord',datos).attr("lon");
                     var latitud               = $('coord',datos).attr("lat");
                     var pais                  = $('country',datos).text();
