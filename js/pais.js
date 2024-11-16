@@ -75,7 +75,7 @@ class Pais{
         this.crearElemento("h5","","footer"); // Crea un elemento con DOM para el string con XML
         this.crearElemento("h4","Datos","footer"); // Crea un elemento con DOM 
         this.crearElemento("p","","footer"); // Crea un elemento con DOM para los datos obtenidos con XML
-        this.cargarDatos();
+        this.mostrarTiempo();
     }
 }
 
