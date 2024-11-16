@@ -32,7 +32,7 @@ class Pais{
                 
            
                     var totalNodos            = $('*',datos).length;
-                    var ciudad                = $('city',datos).attr("name");
+                    var ciudad                = $('location',datos).attr("type");
                     var longitud              = $('coord',datos).attr("lon");
                     var latitud               = $('coord',datos).attr("lat");
                     var pais                  = $('country',datos).text();
