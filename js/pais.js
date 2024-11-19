@@ -43,7 +43,7 @@ class Pais{
                     var stringDatos =   "<li>Ciudad: " + ciudad + "</li>";
                     stringDatos += "<li>Temperatura mÃ­nima: " + temperaturaMin + " grados Celsius</li>";
                     stringDatos += "<li>Temperatura mÃ¡xima: " + temperaturaMax + " grados Celsius</li>";
-                    stringDatos += "<li>Humedad: " + humedad + " " + humedadUnit + "</li>";
+                    stringDatos += "<li>Humedad: " + humedad + "</li>";
                     stringDatos += "<li>PrecipitaciÃ³n valor: " + precipitacionValue + "</li>";
                     $("p").html(stringDatos);                  
                 },
