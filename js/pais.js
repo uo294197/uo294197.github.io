@@ -12,7 +12,7 @@ class Pais{
         this.tipo = "&mode=xml";
         this.unidades = "&units=metric";
         this.idioma = "&lang=es";
-        this.url = "http://api.openweathermap.org/data/2.5/forecast?lat=" + this.latMeta+"&lon="+this.longMeta + "mode="+this.tipo + this.unidades + this.idioma + "&appid=" + this.apikey;
+        this.url = "http://api.openweathermap.org/data/2.5/forecast?+this.nombreCircuito +"mode="+this.tipo + this.unidades + this.idioma + "&appid=" + this.apikey;
     }
     
     getNombreCircuito(){
