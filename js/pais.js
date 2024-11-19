@@ -75,6 +75,6 @@ class Pais{
     }
 }
 
-var pais = new Pais("Shanghai",31.336667, 121.218611)
+const pais = new Pais("Shanghai",31.336667, 121.218611)
 
 
