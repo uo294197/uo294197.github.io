@@ -1,22 +1,31 @@
- /*Pablo Pérez Álvarez UO294197*/
-
- /*Especifidad 001*/
-main {
-    width: 50%;
-    height: 40%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 5% 3%;
-    align-items: center;
-}
  /*Especifidad 002*/
-main > h2  {
-    grid-column: 1 / -1;
-	font-size: 2.8em;
-    text-align: center;
+main > section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 1em; 
+    padding: 0.7em;
 }
+
+ /*Especifidad 003*/
+main > section > article {
+    background-color: #b68d40;
+	color: #f4ebd0;
+    width: calc(23% - 1.3em); 
+    box-sizing: border-box; 
+    text-align: center; 
+    padding: 1em;
+    border-radius: 0.5em; 
+    box-shadow: 0em 0.25em 0.5em rgba(0, 0, 0, 0.2); 
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
 /*Especifidad 002*/
 section > a {
     padding: 0.5em;
@@ -24,77 +33,30 @@ section > a {
     border-radius: 0.3em;
 }
 
-/*Especifidad 002*/
-main > p {
- grid-column: 2 / span 2;
-  text-align: center;
+ /*Especifidad 021*/
+article[data-state="flip"],
+article[data-state="revealed"] {
+    transform: rotateY(180deg);
 }
 
- /*Especifidad 001*/
- /*hereda color de primer plano de body*/
-div {
-    background-color: #0007;
-    border: 0.3em solid black;
-    aspect-ratio: 1.0;
-    border-radius: 50%;
-	width: 85%;
+ /*Especifidad 004*/
+main > section > article > img {
+    width: 7em; 
+    height: 7em;
+    margin: 0.7em auto; 
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
 }
- /*Especifidad 001*/
-button{
-	 width: 80%;
-	 margin-bottom: 0.5em;
+
+ /*Especifidad 002*/
+article h3 {
+    backface-visibility: hidden;
+    position: absolute;
+    margin-top: 0.9em;
+    font-size: 1.2em;
 }
  /*Especifidad 011*/
-button:first-of-type {
-    grid-column: 2 / span 1;
+article[data-state="hidden"] h3 {
+    display: block;
 }
- /*Especifidad 011*/
-button:nth-of-type(2) {
-    grid-column: 3 / span 1;
-}
- /*hereda color de primer plano de body
- necesaria la redefinición de background-color para su correcto funcionamiento*/
-@keyframes in {
-    from { background-color: #0007;}
-    to { background-color: #FF0000;}
-}
-
- /*hereda color de primer plano de body
- necesaria la redefinición de background-color para su correcto funcionamiento*/
-@keyframes out {
-    from { background-color: #FF0000;}
-    to { background-color: #0007;}
-}
- /*Especifidad 011*/
-.load div{
-	animation-name: in;
-	animation-fill-mode: forwards;
-	animation-duration: 0.5s;
-}
- /*Especifidad 011*/
-.unload div{
-	animation-name: out;
-	animation-fill-mode: backwards;
-	animation-duration: 0.1s;
-	animation-delay: 0.1s;
-}
- /*Especifidad 021*/
-.load div:first-of-type{
-	animation-delay: 0s;
-}
- /*Especifidad 021*/
-.load div:nth-of-type(2){
-	animation-delay: 0.5s;
-}
- /*Especifidad 021*/
-.load div:nth-of-type(3){
-	animation-delay: 1s;
-}
- /*Especifidad 021*/
-.load div:nth-of-type(4){
-	animation-delay: 1.5s;
-}
-
-
-
 
