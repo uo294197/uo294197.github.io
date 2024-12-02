@@ -8,7 +8,7 @@ main {
     margin: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr,1fr;
     gap: 5% 3%;
     align-items: center;
 }
@@ -37,9 +37,11 @@ main > p {
 div {
     background-color: #0007;
     border: 0.3em solid black;
-    aspect-ratio: 1.0;
+    aspect-ratio: 1;
     border-radius: 50%;
 	width: 85%;
+    min-width: 5.5em; 
+    min-height: 5.5em; 
 }
  /*Especifidad 001*/
 button{
