@@ -42,14 +42,14 @@ article[data-state="revealed"] {
 }
 
  /*Especifidad 004*/
-main > section > article > img {
-    width: 7em; 
-    height: 7em;
-    margin: 0.7em auto; 
+ main > section > article > img {
+    max-width: 100%; 
+    height: 7em; 
+    width: 7em;
+    margin: 0.7em auto;
     backface-visibility: hidden;
     transform: rotateY(180deg);
 }
-
  /*Especifidad 002*/
 article h3 {
     backface-visibility: hidden;
@@ -62,3 +62,14 @@ article[data-state="hidden"] h3 {
     display: block;
 }
 
+@media (max-width: 600px) {
+    main > section > article {
+        width: 100%; /* Cada artículo ocupa todo el ancho disponible */
+        height: auto; /* Ajusta la altura de acuerdo al contenido */
+    }
+
+    main > section > article > img {
+        width: 5em; /* Reduce el tamaño de la imagen */
+        height: auto; /* Mantiene la proporción */
+    }
+}
