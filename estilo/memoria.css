@@ -12,6 +12,7 @@ main > section > article {
     background-color: #b68d40;
 	color: #f4ebd0;
     width: calc(23% - 1.3em); 
+    height: calc(23% - 1.3em); 
     box-sizing: border-box; 
     text-align: center; 
     padding: 1em;
@@ -23,6 +24,7 @@ main > section > article {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transform: scale(1);
 
 }
 
@@ -51,8 +53,9 @@ main > section > article > img {
  /*Especifidad 002*/
 article h3 {
     backface-visibility: hidden;
+    position: absolute;
     margin-top: 0.9em;
-    font-size: 1.2em;
+    font-size: 1em;
 }
  /*Especifidad 011*/
 article[data-state="hidden"] h3 {
