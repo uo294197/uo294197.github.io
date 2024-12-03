@@ -25,7 +25,6 @@ main > section > article {
     align-items: center;
     justify-content: center;
     transform: scale(1);
-
 }
 
 /*Especifidad 002*/
@@ -55,7 +54,7 @@ article h3 {
     backface-visibility: hidden;
     position: absolute;
     margin-top: 0.9em;
-    font-size: 1em;
+    font-size: 1.3em;
 }
  /*Especifidad 011*/
 article[data-state="hidden"] h3 {
@@ -63,13 +62,14 @@ article[data-state="hidden"] h3 {
 }
 
 @media (max-width: 600px) {
+     /*Especifidad 003*/
     main > section > article {
         width: 100%; 
-        height: 5em; 
+        height: 7em; 
     }
-
+     /*Especifidad 003*/
     main > section > article > img {
-        width: 5em; 
-        height: 5em;
+        width: 7em; 
+        height: 7em;
     }
 }
