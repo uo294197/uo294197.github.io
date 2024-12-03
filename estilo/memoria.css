@@ -67,7 +67,7 @@ article[data-state="hidden"] h3 {
      /*Especifidad 002*/
     main > section {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(45%, 1fr)); 
+        grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
         gap: 1em; 
     }
        /*Especifidad 003*/
