@@ -1,30 +1,40 @@
  /*Especifidad 002*/
-main > section {
+ main > section {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; 
-    gap: 1em; 
+    justify-content: space-between; 
+    gap: 1em;
     padding: 0.7em;
 }
 
- /*Especifidad 003*/
+/* Especifidad 003 */
 main > section > article {
     background-color: #b68d40;
-	color: #f4ebd0;
-    width: calc(23% - 1.3em); 
-    height: calc(23% - 1.3em); 
-    box-sizing: border-box; 
-    text-align: center; 
+    color: #f4ebd0;
+    width: calc(25% - 1.3em); 
+    height: calc(30% - 1.3em);
+    box-sizing: border-box;
+    text-align: center;
     padding: 1em;
-    border-radius: 0.5em; 
-    box-shadow: 0em 0.25em 0.5em rgba(0, 0, 0, 0.2); 
+    border-radius: 0.5em;
+    box-shadow: 0em 0.25em 0.5em rgba(0, 0, 0, 0.2);
     transition: transform 0.5s;
     transform-style: preserve-3d;
-	display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transform: scale(1);
+}
+
+/* Especifidad 004 */
+main > section > article > img {
+    max-width: 100%;
+    height: 7em;
+    width: 7em;
+    margin: 0.7em auto;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
 }
 
 /*Especifidad 002*/
@@ -40,15 +50,7 @@ article[data-state="revealed"] {
     transform: rotateY(180deg);
 }
 
- /*Especifidad 004*/
- main > section > article > img {
-    max-width: 100%; 
-    height: 7em; 
-    width: 7em;
-    margin: 0.7em auto;
-    backface-visibility: hidden;
-    transform: rotateY(180deg);
-}
+
  /*Especifidad 002*/
 article h3 {
     backface-visibility: hidden;
@@ -62,14 +64,20 @@ article[data-state="hidden"] h3 {
 }
 
 @media (max-width: 600px) {
-     /*Especifidad 003*/
-    main > section > article {
-        width: 100%; 
-        height: 7em; 
+     /*Especifidad 002*/
+    main > section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(45%, 1fr)); 
+        gap: 1em; 
     }
-     /*Especifidad 003*/
+       /*Especifidad 003*/
+    main > section > article {
+        width: auto; 
+        height: auto; 
+    }
+       /*Especifidad 004*/
     main > section > article > img {
-        width: 7em; 
-        height: 7em;
+        width: 5em; 
+        height: 5em; 
     }
 }
